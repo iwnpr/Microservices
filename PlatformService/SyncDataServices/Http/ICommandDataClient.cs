@@ -4,6 +4,6 @@ namespace PlatformService.SyncDataServices.Http
 {
     public interface ICommandDataClient
     {
-        Task SendPlaformToCommand(PlatformReadDto plat);
+        Task SendPlatformToCommand(PlatformReadDto plat);
     }
 }

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: platformservice
-          image: ivanpiryutko/platformservice:latest
+          image: iwnpr/platformservice:latest
 ---
 apiVersion: v1
 kind: Service
