@@ -14,7 +14,7 @@ namespace CommandService.Data
         public void CreateCommand(int platformId, Command command)
         {
             if(command is null)
-            throw new ArgumentNullException(nameof(command));
+                throw new ArgumentNullException(nameof(command));
 
             command.PlatformId = platformId;
 
@@ -25,7 +25,7 @@ namespace CommandService.Data
         public void CreatePlatform(Platform plat)
         {
             if(plat is null)
-            throw new ArgumentNullException(nameof(plat));
+                throw new ArgumentNullException(nameof(plat));
                 
             _context.Platforms.Add(plat);
             SaveChange();

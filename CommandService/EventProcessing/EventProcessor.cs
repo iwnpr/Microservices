@@ -31,11 +31,9 @@ namespace CommandService.EventProcessing
             switch (eventType)
             {
                 case EventType.PlatformPublished:
-                    // Handle platform published event
+                    AddPlatform(message);
                     break;
-                case EventType.Undetermined:
                 default:
-                    // Handle undetermined or unknown events
                     break;
             }
         }
@@ -59,7 +57,7 @@ namespace CommandService.EventProcessing
 
             switch (eventType.Event)
             {
-                case "PlatformPublished":
+                case "Platform_Published":
                     Console.WriteLine($"--> Platform published event detected: {notificationMessage}");
                     return EventType.PlatformPublished;
                 default:
@@ -83,13 +81,12 @@ namespace CommandService.EventProcessing
                     {
                         repo.CreatePlatform(plat);
                         repo.SaveChange();
+                        Console.WriteLine("--> Platform added to DB");
                     }
                     else
                     {
                         Console.WriteLine("--> Platform already exist...");
                     }
-
-
 
                 }
                 catch (JsonException ex)

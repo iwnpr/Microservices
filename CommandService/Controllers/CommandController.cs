@@ -45,11 +45,6 @@ namespace CommandService.Controllers
 
             var command = _commandRepository.GetCommand(platformId, commandId);
 
-            if (command == null)
-            {
-                return NotFound();
-            }
-
             return Ok(_mapper.Map<CommandReadDto>(command));
         }
 

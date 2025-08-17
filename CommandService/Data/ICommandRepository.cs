@@ -20,6 +20,6 @@ namespace CommandService.Data
 
         Command GetCommand(int platformId, int commandId);
 
-        void CreateCommand(int platoformId, Command command);
+        void CreateCommand(int platformId, Command command);
     }
 }
